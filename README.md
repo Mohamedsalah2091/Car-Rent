@@ -1,9 +1,9 @@
 # Car-Rent
 
-- Design Pattern used
-MVP, 
-Coordinator
+- Design Pattern 
+ MVP, 
+ Coordinator
 
 - Another
-animations
+ animations
 
