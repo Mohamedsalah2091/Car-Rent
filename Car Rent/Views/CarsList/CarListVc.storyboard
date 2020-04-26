@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cars List Vc-->
+        <scene sceneID="BeI-MX-fAO">
+            <objects>
+                <viewController storyboardIdentifier="CarsListVc" id="UdK-Of-BN7" customClass="CarsListVc" customModule="Car_Rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="onx-k9-QYx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IOg-Xn-T0R">
+                                <rect key="frame" x="0.0" y="44" width="414" height="753"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUE-g3-zOe">
+                                <rect key="frame" x="10" y="807" width="394" height="45"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="O57-bG-25i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressBack:" destination="UdK-Of-BN7" eventType="touchUpInside" id="GnB-hO-BcS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rUE-g3-zOe" firstAttribute="top" secondItem="IOg-Xn-T0R" secondAttribute="bottom" constant="10" id="QIg-51-QfN"/>
+                            <constraint firstItem="IOg-Xn-T0R" firstAttribute="top" secondItem="Nvf-rn-DFU" secondAttribute="top" id="S0v-h4-At0"/>
+                            <constraint firstItem="IOg-Xn-T0R" firstAttribute="leading" secondItem="Nvf-rn-DFU" secondAttribute="leading" id="U7n-8F-dtA"/>
+                            <constraint firstItem="Nvf-rn-DFU" firstAttribute="trailing" secondItem="rUE-g3-zOe" secondAttribute="trailing" constant="10" id="crX-63-c3H"/>
+                            <constraint firstItem="Nvf-rn-DFU" firstAttribute="bottom" secondItem="rUE-g3-zOe" secondAttribute="bottom" constant="10" id="gzp-Ro-DPc"/>
+                            <constraint firstItem="rUE-g3-zOe" firstAttribute="leading" secondItem="Nvf-rn-DFU" secondAttribute="leading" constant="10" id="rBP-Pi-jB9"/>
+                            <constraint firstItem="Nvf-rn-DFU" firstAttribute="trailing" secondItem="IOg-Xn-T0R" secondAttribute="trailing" id="t3o-Oe-ayg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nvf-rn-DFU"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="rUE-g3-zOe" id="NjA-pt-eAa"/>
+                        <outlet property="carTableView" destination="IOg-Xn-T0R" id="JaU-vM-1gu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymW-ZW-uPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+</document>

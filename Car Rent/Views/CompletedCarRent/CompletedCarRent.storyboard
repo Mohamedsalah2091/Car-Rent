@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Completed Car Rent Vc-->
+        <scene sceneID="79b-jE-6bv">
+            <objects>
+                <viewController storyboardIdentifier="CompletedCarRentVc" id="E5e-Gl-rGh" customClass="CompletedCarRentVc" customModule="Car_Rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6gl-MC-AZU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hwo many Days you want The Car For :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="3gW-rS-tn2">
+                                <rect key="frame" x="3" y="84" width="408" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTZ-Me-ng8">
+                                <rect key="frame" x="162" y="130" width="90" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="39N-PD-1dC"/>
+                                    <constraint firstAttribute="width" constant="90" id="cEY-SK-ZhT"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to receve car at you house ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="KFa-7T-Cx3">
+                                <rect key="frame" x="3" y="265" width="408" height="26.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h70-QA-VEn">
+                                <rect key="frame" x="82.666666666666671" y="323.66666666666669" width="248.66666666666663" height="32"/>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="reseveAtHomeOrNotPress:" destination="E5e-Gl-rGh" eventType="valueChanged" id="mdt-Nt-Jyr"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This option Will add extra Fise : 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU5-41-gev">
+                                <rect key="frame" x="71.666666666666686" y="372.66666666666669" width="271" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-Zc-igX">
+                                <rect key="frame" x="82.666666666666671" y="475" width="248.66666666666663" height="35"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressDone:" destination="E5e-Gl-rGh" eventType="touchUpInside" id="GnZ-b2-gla"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount of mony : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="sKf-uT-vVE">
+                                <rect key="frame" x="3" y="428" width="408" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EgA-Zc-igX" firstAttribute="width" secondItem="6gl-MC-AZU" secondAttribute="width" multiplier="0.6" id="0ds-Hm-DzO"/>
+                            <constraint firstItem="h70-QA-VEn" firstAttribute="centerX" secondItem="6gl-MC-AZU" secondAttribute="centerX" id="0hv-dw-aEn"/>
+                            <constraint firstItem="cYe-to-h64" firstAttribute="trailing" secondItem="3gW-rS-tn2" secondAttribute="trailing" constant="3" id="6EU-hb-dwu"/>
+                            <constraint firstItem="jU5-41-gev" firstAttribute="centerX" secondItem="6gl-MC-AZU" secondAttribute="centerX" id="FUy-hp-JtG"/>
+                            <constraint firstItem="3gW-rS-tn2" firstAttribute="top" secondItem="cYe-to-h64" secondAttribute="top" constant="40" id="NPi-49-y2l"/>
+                            <constraint firstItem="h70-QA-VEn" firstAttribute="width" secondItem="6gl-MC-AZU" secondAttribute="width" multiplier="0.6" id="U6g-uH-EfM"/>
+                            <constraint firstItem="xTZ-Me-ng8" firstAttribute="centerX" secondItem="6gl-MC-AZU" secondAttribute="centerX" id="VWQ-av-5MQ"/>
+                            <constraint firstItem="cYe-to-h64" firstAttribute="trailing" secondItem="sKf-uT-vVE" secondAttribute="trailing" constant="3" id="Wng-CQ-dqZ"/>
+                            <constraint firstItem="jU5-41-gev" firstAttribute="top" secondItem="h70-QA-VEn" secondAttribute="bottom" constant="18" id="XIX-1t-W9n"/>
+                            <constraint firstItem="EgA-Zc-igX" firstAttribute="top" secondItem="sKf-uT-vVE" secondAttribute="bottom" constant="20" id="XPH-lr-zpP"/>
+                            <constraint firstItem="xTZ-Me-ng8" firstAttribute="top" secondItem="3gW-rS-tn2" secondAttribute="bottom" constant="20" id="Xdi-i9-LCO"/>
+                            <constraint firstItem="EgA-Zc-igX" firstAttribute="centerX" secondItem="6gl-MC-AZU" secondAttribute="centerX" id="YSK-q0-fzu"/>
+                            <constraint firstItem="sKf-uT-vVE" firstAttribute="top" secondItem="jU5-41-gev" secondAttribute="bottom" constant="35" id="ZNK-dj-22T"/>
+                            <constraint firstItem="sKf-uT-vVE" firstAttribute="leading" secondItem="cYe-to-h64" secondAttribute="leading" constant="3" id="buB-c4-xB1"/>
+                            <constraint firstItem="cYe-to-h64" firstAttribute="trailing" secondItem="KFa-7T-Cx3" secondAttribute="trailing" constant="3" id="ddr-Vr-L9J"/>
+                            <constraint firstItem="KFa-7T-Cx3" firstAttribute="top" secondItem="xTZ-Me-ng8" secondAttribute="bottom" constant="35" id="pQG-MH-XFq"/>
+                            <constraint firstItem="h70-QA-VEn" firstAttribute="top" secondItem="KFa-7T-Cx3" secondAttribute="bottom" constant="32" id="sF0-PL-udE"/>
+                            <constraint firstItem="3gW-rS-tn2" firstAttribute="leading" secondItem="cYe-to-h64" secondAttribute="leading" constant="3" id="sKK-89-vzi"/>
+                            <constraint firstItem="KFa-7T-Cx3" firstAttribute="leading" secondItem="cYe-to-h64" secondAttribute="leading" constant="3" id="tjg-NB-gsK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cYe-to-h64"/>
+                    </view>
+                    <connections>
+                        <outlet property="daysSpinner" destination="xTZ-Me-ng8" id="aap-d2-jCj"/>
+                        <outlet property="done" destination="EgA-Zc-igX" id="Sem-Mw-X9y"/>
+                        <outlet property="reseveAtHomeOrNot" destination="h70-QA-VEn" id="bIg-lx-bc0"/>
+                        <outlet property="totalAmountOfMonyLable" destination="sKf-uT-vVE" id="gXb-Si-D1h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyZ-BF-5Y8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281.15942028985512" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>

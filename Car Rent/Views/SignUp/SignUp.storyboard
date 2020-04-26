@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up Vc-->
+        <scene sceneID="yad-Ln-k2w">
+            <objects>
+                <viewController storyboardIdentifier="SignUpVc" modalPresentationStyle="fullScreen" id="EJl-B9-NjM" customClass="SignUpVc" customModule="Car_Rent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4DL-bY-of5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="luK-gX-3nX">
+                                <rect key="frame" x="10" y="54" width="394" height="98"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQN-zJ-iNi">
+                                <rect key="frame" x="167.66666666666666" y="54" width="79" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrY-GI-cCV">
+                                <rect key="frame" x="10" y="252" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwX-Fe-b6j">
+                                <rect key="frame" x="10" y="305" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3h-5e-oWh">
+                                <rect key="frame" x="9" y="360" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O3-3z-A7a">
+                                <rect key="frame" x="41.333333333333343" y="444" width="331.33333333333326" height="36"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressSignUpButton:" destination="EJl-B9-NjM" eventType="touchUpInside" id="sHj-mS-tBM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rrY-GI-cCV" firstAttribute="leading" secondItem="TIb-Oy-3bz" secondAttribute="leading" constant="10" id="3Gk-AT-tAZ"/>
+                            <constraint firstItem="luK-gX-3nX" firstAttribute="top" secondItem="TIb-Oy-3bz" secondAttribute="top" constant="10" id="4T0-Jh-i9f"/>
+                            <constraint firstItem="TIb-Oy-3bz" firstAttribute="trailing" secondItem="rrY-GI-cCV" secondAttribute="trailing" constant="10" id="8v6-90-8MB"/>
+                            <constraint firstItem="7O3-3z-A7a" firstAttribute="centerX" secondItem="4DL-bY-of5" secondAttribute="centerX" id="Cpd-en-6rd"/>
+                            <constraint firstItem="UQN-zJ-iNi" firstAttribute="bottom" secondItem="luK-gX-3nX" secondAttribute="bottom" id="Gra-Xe-Bdy"/>
+                            <constraint firstItem="TIb-Oy-3bz" firstAttribute="trailing" secondItem="luK-gX-3nX" secondAttribute="trailing" constant="10" id="I7h-l8-qV4"/>
+                            <constraint firstItem="TIb-Oy-3bz" firstAttribute="trailing" secondItem="o3h-5e-oWh" secondAttribute="trailing" constant="11" id="JM5-lo-0GL"/>
+                            <constraint firstItem="UQN-zJ-iNi" firstAttribute="top" secondItem="luK-gX-3nX" secondAttribute="top" id="JTy-Qi-QR5"/>
+                            <constraint firstItem="7O3-3z-A7a" firstAttribute="height" secondItem="4DL-bY-of5" secondAttribute="height" multiplier="0.04" id="Jy3-8i-ktx"/>
+                            <constraint firstItem="o3h-5e-oWh" firstAttribute="top" secondItem="KwX-Fe-b6j" secondAttribute="bottom" constant="21" id="Lc8-UG-GFn"/>
+                            <constraint firstItem="UQN-zJ-iNi" firstAttribute="centerX" secondItem="luK-gX-3nX" secondAttribute="centerX" id="QEs-Ko-HGT"/>
+                            <constraint firstItem="rrY-GI-cCV" firstAttribute="top" secondItem="luK-gX-3nX" secondAttribute="bottom" constant="100" id="SkK-R7-qay"/>
+                            <constraint firstItem="o3h-5e-oWh" firstAttribute="leading" secondItem="TIb-Oy-3bz" secondAttribute="leading" constant="9" id="TF4-vv-FaX"/>
+                            <constraint firstItem="luK-gX-3nX" firstAttribute="leading" secondItem="TIb-Oy-3bz" secondAttribute="leading" constant="10" id="gZG-B1-PxE"/>
+                            <constraint firstItem="7O3-3z-A7a" firstAttribute="top" secondItem="o3h-5e-oWh" secondAttribute="bottom" constant="50" id="hPD-xL-HAd"/>
+                            <constraint firstItem="KwX-Fe-b6j" firstAttribute="top" secondItem="rrY-GI-cCV" secondAttribute="bottom" constant="19" id="lGi-mx-lmw"/>
+                            <constraint firstItem="7O3-3z-A7a" firstAttribute="width" secondItem="4DL-bY-of5" secondAttribute="width" multiplier="0.8" id="m4V-4n-mUM"/>
+                            <constraint firstItem="KwX-Fe-b6j" firstAttribute="leading" secondItem="TIb-Oy-3bz" secondAttribute="leading" constant="10" id="t5y-tl-vNy"/>
+                            <constraint firstItem="TIb-Oy-3bz" firstAttribute="trailing" secondItem="KwX-Fe-b6j" secondAttribute="trailing" constant="10" id="zx9-8E-YiL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TIb-Oy-3bz"/>
+                    </view>
+                    <connections>
+                        <outlet property="backGroundSignUp" destination="luK-gX-3nX" id="VqP-2j-Ama"/>
+                        <outlet property="confirmPassword" destination="o3h-5e-oWh" id="fjy-HE-CUo"/>
+                        <outlet property="password" destination="KwX-Fe-b6j" id="Jvc-Ay-xPL"/>
+                        <outlet property="signUpButton" destination="7O3-3z-A7a" id="su7-Qm-lHP"/>
+                        <outlet property="signUplable" destination="UQN-zJ-iNi" id="MfF-vd-d6l"/>
+                        <outlet property="userName" destination="rrY-GI-cCV" id="w2A-9P-Hj0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0N-Rd-onh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.28985507246378" y="267.85714285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="banner" width="283" height="49"/>
+    </resources>
+</document>

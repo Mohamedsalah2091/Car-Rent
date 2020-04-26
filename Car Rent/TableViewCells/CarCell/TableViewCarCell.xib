@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarCell" rowHeight="365" id="KGk-i7-Jjw" customClass="TableViewCarCell" customModule="Car_Rent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="365"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="365"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j3W-mE-89H">
+                        <rect key="frame" x="5" y="5" width="100" height="105"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="105" id="rFN-qJ-dG2"/>
+                            <constraint firstAttribute="width" constant="100" id="yQQ-wf-iwU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-RF-Mcf">
+                        <rect key="frame" x="110" y="15" width="210" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price per Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-IN-Oob">
+                        <rect key="frame" x="110" y="59" width="190" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t46-2k-q9N">
+                        <rect key="frame" x="5" y="130" width="315" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-jo-t8x">
+                        <rect key="frame" x="5" y="169" width="315" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5li-is-tCq">
+                        <rect key="frame" x="217.5" y="262" width="97.5" height="30"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OcW-Lg-oQf"/>
+                            <constraint firstAttribute="width" constant="97.5" id="uKC-uy-fkd"/>
+                        </constraints>
+                        <state key="normal" title="Choose">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="pressChooseButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AIL-B4-aHz"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIO-Cs-4Or">
+                        <rect key="frame" x="5" y="208" width="315" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DIO-Cs-4Or" firstAttribute="top" secondItem="QQd-jo-t8x" secondAttribute="bottom" constant="15" id="4oV-4W-sok"/>
+                    <constraint firstItem="QQd-jo-t8x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="6bf-99-Pkl"/>
+                    <constraint firstAttribute="trailing" secondItem="QQd-jo-t8x" secondAttribute="trailing" constant="5" id="Bfm-cu-TGX"/>
+                    <constraint firstItem="hR4-IN-Oob" firstAttribute="top" secondItem="MEe-RF-Mcf" secondAttribute="bottom" constant="20" id="HoI-gi-LdZ"/>
+                    <constraint firstItem="5li-is-tCq" firstAttribute="top" secondItem="DIO-Cs-4Or" secondAttribute="bottom" constant="30" id="IRk-D0-SB5"/>
+                    <constraint firstItem="5li-is-tCq" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3" id="Ifa-FC-8rr"/>
+                    <constraint firstAttribute="trailing" secondItem="DIO-Cs-4Or" secondAttribute="trailing" constant="5" id="JXS-YR-V3V"/>
+                    <constraint firstAttribute="trailing" secondItem="t46-2k-q9N" secondAttribute="trailing" constant="5" id="KGZ-vV-Gaq"/>
+                    <constraint firstItem="MEe-RF-Mcf" firstAttribute="leading" secondItem="j3W-mE-89H" secondAttribute="trailing" constant="5" id="O27-Zg-UxN"/>
+                    <constraint firstItem="j3W-mE-89H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="P3u-I5-pGz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hR4-IN-Oob" secondAttribute="trailing" constant="5" id="YZw-Ky-IbW"/>
+                    <constraint firstItem="j3W-mE-89H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="fDs-iX-2MQ"/>
+                    <constraint firstItem="t46-2k-q9N" firstAttribute="top" secondItem="j3W-mE-89H" secondAttribute="bottom" constant="20" id="hwY-fX-01K"/>
+                    <constraint firstItem="MEe-RF-Mcf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jKy-7s-yWa"/>
+                    <constraint firstAttribute="trailing" secondItem="MEe-RF-Mcf" secondAttribute="trailing" constant="5" id="jPC-fh-1k3"/>
+                    <constraint firstItem="t46-2k-q9N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="lF9-Tx-MQv"/>
+                    <constraint firstItem="hR4-IN-Oob" firstAttribute="leading" secondItem="j3W-mE-89H" secondAttribute="trailing" constant="5" id="nCD-AR-tlI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5li-is-tCq" secondAttribute="trailing" constant="-10" id="ubI-N1-hqk"/>
+                    <constraint firstItem="QQd-jo-t8x" firstAttribute="top" secondItem="t46-2k-q9N" secondAttribute="bottom" constant="15" id="yNt-Mf-n6O"/>
+                    <constraint firstItem="DIO-Cs-4Or" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="zO2-bn-YqG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="carImage" destination="j3W-mE-89H" id="VlF-4e-Bez"/>
+                <outlet property="carName" destination="MEe-RF-Mcf" id="Kfj-4Y-HNv"/>
+                <outlet property="carSpeed" destination="QQd-jo-t8x" id="Nul-Ek-aFo"/>
+                <outlet property="carType" destination="t46-2k-q9N" id="6W8-Ez-kk2"/>
+                <outlet property="chooseButton" destination="5li-is-tCq" id="wRX-gm-cuA"/>
+                <outlet property="pricePerHour" destination="hR4-IN-Oob" id="wZ8-pW-CPq"/>
+            </connections>
+            <point key="canvasLocation" x="141.30434782608697" y="232.03125"/>
+        </tableViewCell>
+    </objects>
+</document>
