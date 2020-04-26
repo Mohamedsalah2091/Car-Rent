@@ -1,7 +1,7 @@
 # Car-Rent
 
 - Design Pattern 
- MVP, 
+ MVP
  Coordinator
 
 - Another
