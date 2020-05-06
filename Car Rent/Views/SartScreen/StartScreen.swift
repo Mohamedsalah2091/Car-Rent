@@ -28,7 +28,7 @@ class StartScreenVc : UIViewController , Storyboard {
     var presenter : StartScreenVcPresenter!
     
     public weak var navigation: NavigateStartScreen?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,9 @@ class StartScreenVc : UIViewController , Storyboard {
     }
     
     @IBAction func pressLogin(_ sender: Any) {
-        navigation?.nextToCarList()
+        if presenter.cheekData(name: userNameTextField.text ?? "", password: passwordTextField.text ?? ""){
+            navigation?.nextToCarList()
+        }
     }
     @IBAction func pressSignUp(_ sender: Any) {
         navigation?.nextToSignUp()

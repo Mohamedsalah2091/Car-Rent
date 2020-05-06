@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 protocol NavigateSignUp{
     func goBack()
@@ -25,7 +25,9 @@ class SignUpVc: UIViewController , Storyboard{
     var presenter : SignUpVcPresenter!
     var navigation: NavigateSignUp?
     
+    var data : Results<UserData>!
     var loginOrNot : Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         preparingView()
@@ -37,7 +39,7 @@ class SignUpVc: UIViewController , Storyboard{
     
     
     @IBAction func pressSignUpButton(_ sender: Any) {
-        presenter.cheekData(userName: userName.text!, password: password.text!, confirmpassword: confirmPassword.text!)
+        presenter.saveUserData(userName: userName.text!, password: password.text!, confirmpassword: confirmPassword.text!)
         if  loginOrNot {
             navigation?.goBack()
         }

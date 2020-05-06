@@ -7,14 +7,12 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 extension SignUpVc : SignUpView{
     
- func cheekData(done: Bool) {
+    func saveUserData(done: Bool) {
         loginOrNot = done
-       print(loginOrNot)
     }
-    
     
 }

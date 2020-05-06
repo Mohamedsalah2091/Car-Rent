@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,9 +38,13 @@
 		24A61A67244267EE0000C401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A61A66244267EE0000C401 /* Assets.xcassets */; };
 		24A61A6A244267EE0000C401 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A61A68244267EE0000C401 /* LaunchScreen.storyboard */; };
 		24A61A7C24429D4A0000C401 /* AnimationsStartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A61A7B24429D4A0000C401 /* AnimationsStartScreen.swift */; };
+		24D4491A246300B9000A5214 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D44919246300B9000A5214 /* UsersData.swift */; };
+		24D4491C2463026F000A5214 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D4491B2463026F000A5214 /* RealmService.swift */; };
+		D43612878F59F9C38A52E64E /* Pods_Car_Rent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B46CF70AF3DEAA985FA5ED /* Pods_Car_Rent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B46CF70AF3DEAA985FA5ED /* Pods_Car_Rent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Car_Rent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240D5B5A2443785A00851B84 /* StartScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
 		240D5B5E244386CA00851B84 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		240D5B612443B74C00851B84 /* SignUpVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVc.swift; sourceTree = "<group>"; };
@@ -74,6 +78,10 @@
 		24A61A69244267EE0000C401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24A61A6B244267EE0000C401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		24A61A7B24429D4A0000C401 /* AnimationsStartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsStartScreen.swift; sourceTree = "<group>"; };
+		24D44919246300B9000A5214 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
+		24D4491B2463026F000A5214 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		79502AB5220E3C528D4D0C75 /* Pods-Car Rent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car Rent.debug.xcconfig"; path = "Target Support Files/Pods-Car Rent/Pods-Car Rent.debug.xcconfig"; sourceTree = "<group>"; };
+		7AAC0F22D2A6A83626F93DF4 /* Pods-Car Rent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Car Rent.release.xcconfig"; path = "Target Support Files/Pods-Car Rent/Pods-Car Rent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +89,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43612878F59F9C38A52E64E /* Pods_Car_Rent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15A867D4BA366AD75D4E0566 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79502AB5220E3C528D4D0C75 /* Pods-Car Rent.debug.xcconfig */,
+				7AAC0F22D2A6A83626F93DF4 /* Pods-Car Rent.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		240D5B60244386D900851B84 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +203,8 @@
 			children = (
 				24A61A5C244267EC0000C401 /* Car Rent */,
 				24A61A5B244267EC0000C401 /* Products */,
+				15A867D4BA366AD75D4E0566 /* Pods */,
+				4AE51B92CCD0D8E4B27A2234 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +219,7 @@
 		24A61A5C244267EC0000C401 /* Car Rent */ = {
 			isa = PBXGroup;
 			children = (
+				24D449182462FD88000A5214 /* Realm */,
 				249B01402453292100534267 /* Coordinators */,
 				24A61A71244268080000C401 /* Model */,
 				24A61A72244268380000C401 /* Views */,
@@ -287,6 +308,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		24D449182462FD88000A5214 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				24D44919246300B9000A5214 /* UsersData.swift */,
+				24D4491B2463026F000A5214 /* RealmService.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		4AE51B92CCD0D8E4B27A2234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04B46CF70AF3DEAA985FA5ED /* Pods_Car_Rent.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,9 +332,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A61A6E244267EE0000C401 /* Build configuration list for PBXNativeTarget "Car Rent" */;
 			buildPhases = (
+				9D2C6218B2685929D36B4386 /* [CP] Check Pods Manifest.lock */,
 				24A61A56244267EC0000C401 /* Sources */,
 				24A61A57244267EC0000C401 /* Frameworks */,
 				24A61A58244267EC0000C401 /* Resources */,
+				8617A6539968D4E0035AFBB6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +397,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8617A6539968D4E0035AFBB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Car Rent/Pods-Car Rent-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Car Rent/Pods-Car Rent-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Car Rent/Pods-Car Rent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D2C6218B2685929D36B4386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Car Rent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24A61A56244267EC0000C401 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -371,10 +453,12 @@
 				245B20B0244E3F4C004EC463 /* SignUpPresenter.swift in Sources */,
 				24A61A5E244267EC0000C401 /* AppDelegate.swift in Sources */,
 				248047CC244A383900518E71 /* CarPopUp.swift in Sources */,
+				24D4491C2463026F000A5214 /* RealmService.swift in Sources */,
 				245B20AE244E3A62004EC463 /* pickerViewCompletedCarRent.swift in Sources */,
 				2494C9B12455EE4800EC3DEB /* PresenterSignUp.swift in Sources */,
 				2494C9AD2455D91B00EC3DEB /* Storyboard.swift in Sources */,
 				2414AAB52447F1CD0037C493 /* TableViewCarList.swift in Sources */,
+				24D4491A246300B9000A5214 /* UsersData.swift in Sources */,
 				240D5B622443B74C00851B84 /* SignUpVc.swift in Sources */,
 				249B014224532EC900534267 /* Coordinator.swift in Sources */,
 				24A61A60244267EC0000C401 /* SceneDelegate.swift in Sources */,
@@ -527,6 +611,7 @@
 		};
 		24A61A6F244267EE0000C401 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79502AB5220E3C528D4D0C75 /* Pods-Car Rent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -545,6 +630,7 @@
 		};
 		24A61A70244267EE0000C401 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AAC0F22D2A6A83626F93DF4 /* Pods-Car Rent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

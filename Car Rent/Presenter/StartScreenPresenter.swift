@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol StartScreenView : class {
-
+    
 }
 
 
@@ -20,6 +21,16 @@ class StartScreenVcPresenter{
     init(view : StartScreenView) {
         self.view = view
     }
-   
+    
+    func cheekData(name : String , password:String) -> Bool {
+        for item in RealmService.shared.dataArray {
+            if item.name == name && item.password == password{
+                return true
+            }
+        }
+        return false
+        
+    }
+    
     
 }

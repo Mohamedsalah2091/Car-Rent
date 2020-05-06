@@ -11,6 +11,4 @@ import UIKit
 
 extension StartScreenVc : StartScreenView{
     
- 
-    
 }

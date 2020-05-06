@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol SignUpView : class {
-    func cheekData(done : Bool)
+    func saveUserData(done : Bool)
 }
 
 
@@ -17,16 +18,22 @@ class SignUpVcPresenter{
     
     private weak var view: SignUpView?
     
+    
+    
     init(view : SignUpView) {
         self.view = view
+        let realm = RealmService.shared.realm
+        RealmService.shared.dataArray = realm.objects(UserData.self)
+        // print(RealmService.shared.realm.configuration.fileURL)
     }
     
-    func cheekData(userName : String , password : String , confirmpassword : String ){
+    func saveUserData(userName : String , password : String , confirmpassword : String ){
         if userName.isEmpty || password != confirmpassword || password.isEmpty{
-            view?.cheekData(done: false)
-            
+            view?.saveUserData(done: false)
         }else {
-            view?.cheekData(done: true)
+            view?.saveUserData(done: true)
+            let newData = UserData(name: userName,password: password)
+            RealmService.shared.save(newData)
         }
     }
     
